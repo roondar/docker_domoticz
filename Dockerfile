@@ -38,14 +38,14 @@ RUN apk add --no-cache git \
 	 curl libcurl curl-dev \
 	 libusb libusb-dev \
 	 coreutils tzdata \
-	 zlib zlib-dev \
+	 zlib zlib-dev wget \
 	 udev eudev-dev \
 	 linux-headers && \
 	 git clone --depth 2 https://github.com/OpenZWave/open-zwave.git /src/open-zwave && \
 	 cd /src/open-zwave && \
 	 make && \
 	 ln -s /src/open-zwave /src/open-zwave-read-only && \
-	 git clone --depth 2 https://github.com/domoticz/domoticz.git /src/domoticz && \
+	 git clone -b 4.9700  --depth 2 https://github.com/domoticz/domoticz.git /src/domoticz && \
 	 cd /src/domoticz && \
 	 git fetch --unshallow && \
 	 cmake -DCMAKE_BUILD_TYPE=Release . && \
