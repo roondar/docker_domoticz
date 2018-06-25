@@ -38,7 +38,7 @@ RUN apk add --no-cache git \
 	 curl libcurl curl-dev \
 	 libusb libusb-dev \
 	 coreutils tzdata \
-	 zlib zlib-dev wget python3 \
+	 zlib zlib-dev wget python3 python3-dev \
 	 udev eudev-dev \
 	 linux-headers && \
 	 git clone --depth 2 https://github.com/OpenZWave/open-zwave.git /src/open-zwave && \
